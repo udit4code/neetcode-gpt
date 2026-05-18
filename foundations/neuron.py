@@ -17,7 +17,7 @@ class Solution:
             result = 1.0 / (1.0 + np.exp(-z))
         elif activation == "relu":
             # ReLU: max(0, z)
-            result = max(0.0, z)
+            result = np.maximum(0.0, z)
         else:
             result = z
         return np.round(float(result), 5)
